@@ -1,0 +1,12 @@
+@import "_utils.styl"
+@import "_variables.styl"
+
+.btn
+    font-size: 0.85em
+    color: $fcolor
+    border-radius: $radius
+    boothshadow(0px,0px,$radius,$mcolor,0px,0px,$radius,lighten($mcolor,10%))
+    background: $mcolor
+    border: $border-radius solid darken($mcolor,10%)
+    min-width: 4em
+    min-height: 2em
