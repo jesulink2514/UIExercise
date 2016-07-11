@@ -1,0 +1,21 @@
+{
+  "name": "uiexercise",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Cesar Jesus Angulo Gasco <jesus.angulo@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jesulink2514/UIExercise",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}

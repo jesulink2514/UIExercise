@@ -1,44 +1,95 @@
-fieldset
-    padding: .35em .625em .75em
-    margin: 0 2px
-    border: 1px solid #c0c0c0
-    legend
-        margin-bottom: 5px
-        max-width: 100%
+@import "_utils.styl"
+@import "_variables.styl"
 
-.form-group
-    margin-bottom: 15px
-    &:last-child
-        margin-bottom: 0
+input::-webkit-input-placeholder
+    color:    #b5b5b5
 
-label
-    display: inline
-    min-width: 5em
-    padding: .2em .6em .3em
-    font-size: 75%
-    font-weight: bold
-    line-height: 1
-    white-space: nowrap
-    vertical-align: baseline
-    border-radius: .25em
+input:-moz-placeholder
+    color:    #b5b5b5
 
-.form-group
-    display: block 
+.container
+    width: standarwidth
+    max-width: $standarwidth
+    margin: 0 auto
+
+#signup
+    padding: 0px $mainpadding*1.25 $mainpadding*1.25
+    background: #fff
+    box-shadow2(0px 0px 0px 5px rgba(255,255,255,0.4),0px 4px 20px rgba(0,0,0,0.33))    
+    border-radius($radius)
+    display: table
+    position: static
+
+    .header
+        margin-bottom: $mainpadding
+
+        h3
+            color: #333333
+            font-size: $mainsize
+            font-weight: bold
+            margin-bottom: $radius
+
+    .sep
+        height: 1px
+        background: lighten($mcolor,80%)
+        width: $standarwidth
+        margin: 0px -1*$mainsize
+
+    .inputs
+        margin-top: $mainsize
+
+        label
+            color: #8f8f8f
+            font-size: 0.5*$mainsize                
+            margin-bottom: 1.2*$radius
+            display: block
+
+        input[type=email], input[type=text]
+            background: #f5f5f5
+            font-size: 0.8rem
+            border-radius(3px)
+            border: none
+            padding: $mainsize*0.5 10px 2*$radius
+            width: $rowwidth
+            margin-bottom: $mainpadding
+            box-shadow(inset 0px 2px 3px rgba(0,0,0,0.1))    
+            clear: both
+
+        input[type=email]:focus, input[type=text]:focus
+            background: #fff
+            box-shadow3(0px 0px 0px 3px #fff38e, inset 0px 2px 3px rgba( 0,0,0,0.2 ), 0px 5px 5px rgba( 0,0,0,0.15))        
+            outline: none
+
+        input:focus + .help 
+            display:block
+
+.btn
+    font-size: 0.85em
+    color: $fcolor
+    border-radius: $radius
+    box-shadow2(inset 0px 0px $halfpadding $mcolor, 0px 0px $halfpadding lighten($mcolor,25%))
+    background: $mcolor
+    border: $border-radius solid darken($mcolor,10%)
     width: 100%
+    margin-top: 20px
+    padding: 15px 0
+    font-weight: 500
+    letter-spacing: 1px
+    text-align: center
+    text-decoration: none            
+    text-shadow:0px 1px 3px rgba(000,000,000,0.3),0px 0px 0px rgba(255,255,255,0)
+    display: table
+    position: static
     clear: both
-    input
-        display: block
-        padding: 6px 12px
-        font-size: 14px
-        line-height: 1.42857143
-        color: #555
-        background-color: #fff
-        background-image: none
-        border: 1px solid #ccc
-        border-radius: 4px
-        outline: 0
+    cursor: pointer
+    &:hover
+        background: lighten($mcolor,10%)
 
-        &:focus
-            border-color: #66afe9
-            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6)
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6)
+.help
+    font-weight: 500    
+    display: none
+    color: $infocolor
+    font-size: 0.7em
+    margin-bottom: 20px
+    margin-top: -0.35em
+    
